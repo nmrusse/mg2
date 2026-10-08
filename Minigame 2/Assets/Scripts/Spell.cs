@@ -20,14 +20,14 @@ public class Spell : MonoBehaviour
         float time = Time.deltaTime;
         
         // STEP 1 -------------------------------------------------------------
-
+        _timeLeft -= time; 
         // STEP 2 -------------------------------------------------------------
         // Uncomment and fix the if statement.
-        //if _timeLeft <= 0.0
-        //{
-        //    gameObject.SetActive(false);
-        //    _collider.enabled = false;
-        //}
+        if (_timeLeft <= 0.0)
+        {
+            gameObject.SetActive(false);
+            _collider.enabled = false;
+        }
         // STEP 2 -------------------------------------------------------------
     }
 }
